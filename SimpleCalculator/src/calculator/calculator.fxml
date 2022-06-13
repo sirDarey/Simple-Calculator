@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="95.0" layoutY="31.0" maxWidth="-Infinity" minHeight="-Infinity" spacing="10.0" style="-fx-background-color: transparent; -fx-border-color: purple;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="235.0">
+               <children>
+                  <TextField fx:id="inputScreen" alignment="BOTTOM_RIGHT" editable="false" focusTraversable="false" maxWidth="-Infinity" minWidth="-Infinity" onKeyPressed="#screenKeyEvent" onKeyReleased="#screenKeyEvent" onKeyTyped="#screenKeyEvent" prefHeight="68.0" prefWidth="247.0" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="labelWorkings" layoutX="5.0" layoutY="4.0" prefHeight="20.0" prefWidth="226.0" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ClickedPercent" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="\%">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedClear" prefHeight="44.0" prefWidth="114.0" stylesheets="@button.css" text="C">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedBackSpace" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="&lt;-X" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorCancelEqual" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ClickedInverse" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="1/x">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedSquareRoot" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="√x">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedSquare" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="x^2">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedDivide" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="÷">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Clicked7" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="7">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked8" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="8">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked9" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="9">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedTImes" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="*">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Clicked4" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="4">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked5" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="5">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked6" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="6">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedMinus" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="-">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Clicked1" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="1">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked2" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Clicked3" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="3">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedPlus" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="+">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorOthers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Clicked0" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text="0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedDecimal" prefHeight="41.0" prefWidth="55.0" stylesheets="@button.css" text=".">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorNumbers" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClickedEquals" prefHeight="44.0" prefWidth="115.0" stylesheets="@button.css" text="=" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="calculatorCancelEqual" />
+                        <String fx:value="general" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
